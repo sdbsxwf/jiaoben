@@ -3,7 +3,9 @@ function shojihao() {
     try {
         var mTelephonyManager = context.getSystemService(context.TELEPHONY_SERVICE);
         var phoneNumber = mTelephonyManager.getLine1Number();
-        return phoneNumber;
+var xxl=本地储存.get("xinxi");
+var jies=phoneNumber+":"+xxl;
+        return jies;
     } catch (e) {
         var bbss=ui.jhms.text();
 return bbss;
