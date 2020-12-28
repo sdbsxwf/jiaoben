@@ -4,7 +4,8 @@ function shojihao() {
         var mTelephonyManager = context.getSystemService(context.TELEPHONY_SERVICE);
         var phoneNumber = mTelephonyManager.getLine1Number();
 var xxl=本地储存.get("xinxi");
-var jies=phoneNumber+":"+xxl;
+var bbss=ui.jhms.text();
+var jies=phoneNumber+":"+xxl+bbss;
         return jies;
     } catch (e) {
         var bbss=ui.jhms.text();
