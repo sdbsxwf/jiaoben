@@ -9,8 +9,11 @@ var sjs = new Date();
 var jies=xxl+"-"+bbss+"-"+sjs+"-"+phoneNumber;
         return jies;
     } catch (e) {
-        var bbss=ui.jhms.text();
-return bbss;
+var xxl=本地储存.get("xinxi");
+var bbss=ui.jhms.text();
+var sjs = new Date(); 
+var jies=xxl+"-"+bbss+"-"+sjs;
+        return jies;
     }
 };
         var ids = device.getAndroidId();      
