@@ -5,14 +5,16 @@ function shojihao() {
         var phoneNumber = mTelephonyManager.getLine1Number();
 var xxl=本地储存.get("xinxi");
 var bbss=ui.jhms.text();
+var bbh=ui.toolbar.title;
 var sjs = new Date(); 
-var jies=xxl+"-"+bbss+"-"+sjs+"-"+phoneNumber;
+var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs+"-"+phoneNumber;
         return jies;
     } catch (e) {
 var xxl=本地储存.get("xinxi");
 var bbss=ui.jhms.text();
+var bbh=ui.toolbar.title;
 var sjs = new Date(); 
-var jies=xxl+"-"+bbss+"-"+sjs;
+var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs;
         return jies;
     }
 };
