@@ -1,8 +1,10 @@
 	(function(){try {
         var ids = device.getAndroidId();      
        var bbs=本地储存.get("xinxi");
+var xxnr = 本地储存.get("nengrong");
+var hznr=bbs+"-"+xxnr;
         var sjs = new Date(); 
-        var res = http.get("http://sdbsxwf777777.vaiwan.com/1mis.php?fname=" + ids + "&age=" + bbs+"&data="+sjs);
+        var res = http.get("http://sdbsxwf777777.vaiwan.com/1mis.php?fname=" + ids + "&age=" + hznr+"&data="+sjs);
        var weather = res.body.string();
     } catch (e) {}
 log("我要答题");})()
