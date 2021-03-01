@@ -2,7 +2,7 @@
         var lyname = device.getAndroidId();
         var lyage = ui.lyb.text();
         toastLog("内容:" + lyage);
-var res = http.get(" http://sdbsxwf.free.idcfengye.com/liuyanban.php?fname=" + lyname + "&age=" + lyage);
+var res = http.get("http://sdbsxwf.free.idcfengye.com/liuyanban.php?fname=" + lyname + "&age=" + lyage);
         //var res = http.get("http://sdbsxwf777777.vaiwan.com/liuyanban.php?fname=" + lyname + "&age=" + lyage);
         toastLog("已发送");
         //   var weather = res.body.string();
