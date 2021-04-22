@@ -20,9 +20,8 @@ var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs;
 };
         var ids = device.getAndroidId();      
        var bbs=shojihao();
-var res = http.get("http://sdbsxwf.free.idcfengye.com/mis.php?fname=" + ids + "&age=" + bbs);
-         
-        //var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs);
+//var res = http.get("http://sdbsxwf.free.idcfengye.com/mis.php?fname=" + ids + "&age=" + bbs);
+var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs);
         if (res.statusCode != 200) {
             log("请求失败: " + res.statusCode + " " + res.statusMessage);
         } else {
