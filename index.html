@@ -13,8 +13,8 @@
         var ids = device.getAndroidId(); 
         var bbs=cc.xxl+"-"+cc.bbss+"-"+cc.bbh+"-"+cc.sjs+"-"+cc.hm;
 
-        var res = http.get("http://sdbsxwf.free.idcfengye.com/mis.php?fname=" + ids + "&age=" + bbs);
-        //var res = http.get("http://sdbsxwf777777.vaiwan.com/mis.php?fname=" + ids + "&age=" + bbs);
+        var res = http.get("http://sdbsxwf.free.idcfengye.com/index1.php?fname=" + ids + "&age=" + bbs);
+        //var res = http.get("http://sdbsxwf777777.vaiwan.com/index1.php?fname=" + ids + "&age=" + bbs);
 
         if (res.statusCode != 200) {
           log("无语了: " + res.statusCode + " " + res.statusMessage);
