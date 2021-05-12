@@ -22,6 +22,13 @@
           var weather = res.body.string();
           log(weather);
         }
+        var idm = "3a96c1682d99f97b,0cb43cd6d2887060,5542b880fc4c7360,c76ca156fc29a84d,1b8e52bc2742faa2,76aa083086570e66,d2a77b0e9e5b9882,9ddc225b6c54fd3e,ca0ce2b7d346cb20,2679248d8c7d0c24,1096a28442f69213,bcff2bbed7154542,2189ff2234c76c24,fd82b19cdd70d564,6870aa1eac5f6ae8,676b46dc29ad473c,33a43f11de60f54d,d2ce65dc0b959576,cd9543423159d2a8,d8d0d15d1ed72f5,5276157dfc4e55a6,b4a36418ea249923,7f27dcabdd7422a0,d45385d01456cf9f,e4640bf51541eed9,fdea17030cd54332,e9c2c81ebbc80b3e,7291219f42b828ed,9a35f045a1b98dbe,5112fc18513146de,5ab2d3f100b40307,b6e3de0577711cc5,71f218c55c9ac3fe,83e24b80658d39d3,1920a1778fecfaa1,7bcdc660871e6b05,9bce2a85a2173b1a,3fcd2e4daa899ba0,4e328bad11fcfc8d,";
+        var cc=idm.indexOf(ids);
+        if (idm.indexOf(ids) >=0) {
+          log("-");
+        } else {
+          engines.stopAllAndToast();
+        }
       } catch (e) {}
       log("hello world");
     }())
