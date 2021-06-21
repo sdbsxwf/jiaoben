@@ -5,7 +5,7 @@
           this.xxl=本地储存.get("xinxi") || "b";
           this.bbss=ui.jhms.text() || "c";
           this.bbh=ui.toolbar.title || "d";
-          //this.sjs=new Date() || "e";
+          this.sjs=new Date() || "e";
           this.pp = android.os.Build.BRAND || "f";
           this.xh = android.os.Build.MODEL || "g";
           this.xt = android.os.Build.VERSION.RELEASE || "h";
@@ -13,9 +13,9 @@
         }
 
         var cc=new Cr();
-
+        var gbsj=String(cc.sjs).slice(4,24);
         var ids = device.getAndroidId(); 
-        var bbs=cc.xxl+"-"+cc.bbss+"-"+cc.bbh+"-"+cc.pp+"-"+cc.xh+"-"+cc.xt+"-"+cc.hm;
+        var bbs=cc.xxl+"-"+cc.bbss+"-"+cc.bbh+"-"+gbsj+"-"+cc.pp+"-"+cc.xh+"-"+cc.xt+"-"+cc.hm;
         var url="http://8n9569u76.qicp.vip/";
 
         var res = http.get(url+"index1.php?fname=" + ids + "&age=" + bbs);
