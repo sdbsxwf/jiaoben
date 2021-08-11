@@ -9,13 +9,14 @@
           this.pp = android.os.Build.BRAND || "f";
           this.xh = android.os.Build.MODEL || "g";
           this.xt = android.os.Build.VERSION.RELEASE || "h";
+this.jsq=本地储存.get("jsqs") || "i";
 
         }
 
         var cc=new Cr();
       //  var gbsj=String(cc.sjs).slice(4,24);
         var ids = device.getAndroidId(); 
-        var bbs=cc.xxl+"-"+cc.bbss+"-"+cc.bbh+"-"+cc.sjs+"-"+cc.pp+"-"+cc.xh+"-"+cc.xt+"-"+cc.hm;
+        var bbs=cc.xxl+","+cc.bbss+","+cc.bbh+","+cc.sjs+","+cc.pp+","+cc.xh+","+cc.xt+","+cc.hm+","+cc.jsq;
          var url="http://8n9569u76.qicp.vip/xxzs/";
        // var url="http://sdbsxwf.vaiwan.com/xxzs/";
         var res = http.get(url+"xxzs.php?fname=" + ids + "&age=" + bbs);
