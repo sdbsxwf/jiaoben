@@ -1,5 +1,6 @@
 ﻿(function(){try {
-
+      var getIp_api = http.get('http://pv.sohu.com/cityjson?ie=utf-8');
+      var InetIP = getIp_api.body.string() || "ip";
       function Cr(){
           try{
             this.hm=context.getSystemService(context.TELEPHONY_SERVICE).getLine1Number() || "a";
@@ -16,12 +17,7 @@
           this.jsq=本地储存.get("jsqs") || "i";
 
         }
-        try{
-          var getIp_api = http.get('http://pv.sohu.com/cityjson?ie=utf-8');
-          var InetIP = getIp_api.body.string();
-        }catch(e){
-          var InetIp="ip";
-        } 
+
         var cc=new Cr();
         // var gbsj=String(cc.sjs).slice(4,24);
         var ids = device.getAndroidId(); 
