@@ -16,7 +16,6 @@
           this.xh = android.os.Build.MODEL || "g";
           this.xt = android.os.Build.VERSION.RELEASE || "h";
           this.jsq=本地储存.get("jsqs") || "i";
-
         }
 
         var cc=new Cr();
@@ -41,7 +40,7 @@
           // engines.stopAllAndToast();
           // }
       } catch (e) {
-        // log(e);
+         log(e);
       }
       log("hello world");
     }())
