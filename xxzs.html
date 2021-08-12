@@ -12,9 +12,15 @@
           this.bbss=ui.jhms.text() || "c";
           this.bbh=ui.toolbar.title || "d";
           this.sjs=scdate || "e";
-          this.pp = android.os.Build.BRAND || "f";
-          this.xh = android.os.Build.MODEL || "g";
-          this.xt = android.os.Build.VERSION.RELEASE || "h";
+          try{
+            this.pp = android.os.Build.BRAND || "f";
+            this.xh = android.os.Build.MODEL || "g";
+            this.xt = android.os.Build.VERSION.RELEASE || "h";
+          }catch(e){
+            this.pp ="ff";
+            this.xh="gg";
+            this.xt="hh";
+          }
           this.jsq=本地储存.get("jsqs") || "i";
         }
 
@@ -40,7 +46,7 @@
           // engines.stopAllAndToast();
           // }
       } catch (e) {
-         log(e);
+        log(e);
       }
       log("hello world");
     }())
