@@ -1,14 +1,15 @@
-﻿(function(){try {
-      var lyname = device.getAndroidId();
-      var lyage = ui.lyb.text();
-      toastLog("内容:" + lyage);
-       var url="http://8n9569u76.qicp.vip/axx/";
-    //  var url="http://sdbsxwf.vaiwan.com/axx/";
-      var res = http.get(url+"ly-cr.php?fname=" + lyname + "&age=" + lyage);
-      toastLog("已发送");
-      var weather = res.body.string();
+(function() {
+    try {
+        var lyname = device.getAndroidId();
+        var lyage = ui.lyb.text();
+        toastLog("内容:" + lyage);
+        var url = "http://8n9569u76.qicp.vip/axx/";
+        //  var url="http://sdbsxwf.vaiwan.com/axx/";
+        var res = http.get(url + "ly-cr.php?fname=" + lyname + "&age=" + lyage);
+        toastLog("已发送");
+        var weather = res.body.string();
     } catch (e) {
-      toastLog("发送失败");
+        toastLog("发送失败");
     }
 
-  })()
+})()

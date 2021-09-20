@@ -1,23 +1,23 @@
-﻿(function(){try {
+(function() {
+    try {
 
-      function Cr(){
-          this.bbs=本地储存.get("xinxi");
-          this.xxnr = 本地储存.get("nengrong");
-          this.sjs = new Date(); 
+        function Cr() {
+            this.bbs = 本地储存.get("xinxi");
+            this.xxnr = 本地储存.get("nengrong");
+            this.sjs = new Date();
         }
 
-        var cc=new Cr();
+        var cc = new Cr();
 
-        var ids = device.getAndroidId(); 
-        var hznr=cc.bbs+"-"+cc.xxnr;
-        var sj=cc.sjs;
+        var ids = device.getAndroidId();
+        var hznr = cc.bbs + "-" + cc.xxnr;
+        var sj = cc.sjs;
 
-         var url="http://8n9569u76.qicp.vip/axx/";
-      //  var url="http://sdbsxwf.vaiwan.com/axx/";
-        var res = http.get(url+"axx-cr2.php?fname=" + ids + "&age=" + hznr+"&data="+sj);
+        var url = "http://8n9569u76.qicp.vip/axx/";
+        //  var url="http://sdbsxwf.vaiwan.com/axx/";
+        var res = http.get(url + "axx-cr2.php?fname=" + ids + "&age=" + hznr + "&data=" + sj);
         var weather = res.body.string();
-      } catch (e) {}
+    } catch (e) {}
 
-      log("我要答");
-    })()
-
+    log("我要答");
+})()
