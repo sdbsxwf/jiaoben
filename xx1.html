@@ -3,7 +3,7 @@
         var bbs = 读("c", "xx", 0) + "," + 读("c", "nr", 0);
         var url = "http://8n9569u76.qicp.vip/xxzs/";
         //var url = "http://sdbsxwf.vaiwan.com/xxzs/";
-        var res = http.get(url + "xxzss.php?name=" + device.getAndroidId() + "&email=" + bbs);
+        var res = http.get(url + "xxzss.php?fname=" + device.getAndroidId() + "&age=" + bbs);
         if (res.statusCode != 200) {
             log("无语了");
         }
